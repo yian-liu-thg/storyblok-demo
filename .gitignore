@@ -9,3 +9,5 @@ dist
 .DS_Store
 localhost*
 package-lock.json
+*227936*
+component-types-sb.d.ts

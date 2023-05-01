@@ -7,14 +7,18 @@
     "dev:https": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "predev": "storyblok pull-components --space=$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-) && storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/types/component-types-sb",
+    "predev:https": "storyblok pull-components --space=$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-) && storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/types/component-types-sb"
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.4.3"
+    "element-plus": "^2.3.4",
+    "nuxt": "^3.4.3",
+    "prettier": "^2.8.8",
+    "storyblok-generate-ts": "^1.13.2"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.6.7",
     "@storyblok/nuxt": "^5.4.4"
   }
 }
