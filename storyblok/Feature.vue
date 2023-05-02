@@ -6,7 +6,7 @@
 	</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	import { FeatureStoryblok } from "./types/component-types-sb"
-	defineProps({ blok: FeatureStoryblok })
+	const { blok } = defineProps<{ blok: FeatureStoryblok }>()
 </script>

@@ -1,13 +1,13 @@
 <template>
 	<div v-editable="blok">
 		<StoryblokComponent
-			v-for="blok in blok.columns"
-			:key="blok._uid"
-			:blok="blok" />
+			v-for="column in blok.columns"
+			:key="column._uid"
+			:blok="column" />
 	</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 	import { GridStoryblok } from "./types/component-types-sb"
-	defineProps({ blok: GridStoryblok })
+	const { blok } = defineProps<{ blok: GridStoryblok }>()
 </script>

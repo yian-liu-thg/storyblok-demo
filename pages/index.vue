@@ -1,7 +1,9 @@
 <script setup>
-const story = await useAsyncStoryblok('home', { version: 'draft' })
+	const story = await useAsyncStoryblok("home", { version: "draft" })
 </script>
- 
+
 <template>
-  <StoryblokComponent v-if="story" :blok="story.content" />
+	<StoryblokComponent
+		v-if="story"
+		:blok="story.content" />
 </template>
