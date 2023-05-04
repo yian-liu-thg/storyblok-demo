@@ -1,0 +1,12 @@
+version: v2.0
+provider: cloudflare
+routes:
+  - pathPrefix: /
+    name: ssr
+    type: function
+    directory: .
+    build:
+      command: build
+      output:
+        directory: .output/server
+        filename: index.mjs
