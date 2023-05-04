@@ -1,6 +1,8 @@
 <script setup>
 	const { slug } = useRoute().params
-	const story = await useAsyncStoryblok(slug, { version: "draft" })
+	const story = await useAsyncStoryblok(slug.join("/").replace(/\/$/, ""), {
+		version: "draft"
+	})
 </script>
 
 <template>
