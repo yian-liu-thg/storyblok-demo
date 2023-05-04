@@ -1,12 +1,18 @@
 <template>
 	<div v-editable="blok">
 		<NuxtLink
-			:to="'/' + (isStory ? blok.link.cached_url : blok.link.url)"
+			v-if="isStory"
+			:to="'/' + blok.link.cached_url"
 			style="text-decoration-line: none">
 			<ElText size="large">
 				{{ blok.displayed_text }}
 			</ElText>
 		</NuxtLink>
+		<ElLink
+			v-else
+			:href="blok.link.url"
+			>{{ blok.displayed_text }}</ElLink
+		>
 	</div>
 </template>
 
