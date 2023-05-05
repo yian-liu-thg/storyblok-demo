@@ -18,6 +18,7 @@ Make sure to install the dependencies:
 
 ```bash
 npm install
+npm run prepare-local
 ```
 
 Create a `.env` file from `.env.local` and fill in the `STORYBLOK_TOKEN` and `STORYBLOK_SPACE_ID` fields from your storyblok space
