@@ -10,3 +10,4 @@ routes:
       output:
         directory: .output/public
         filename: _payload.js
+        staticDirectory: _nuxt
