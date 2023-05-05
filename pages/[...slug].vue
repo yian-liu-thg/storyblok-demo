@@ -9,4 +9,5 @@
 	<StoryblokComponent
 		v-if="story"
 		:blok="story.content" />
+	<ElText size="large">Not Found</ElText>
 </template>
