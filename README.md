@@ -1,42 +1,31 @@
-# Nuxt 3 Minimal Starter
+# Storyblok Demo
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This demo project uses Nuxt3
 
 ## Setup
+
+Make sure you have the following CLIs installed:
+
+```bash
+# storyblok
+npm install storyblok -g
+
+# mkcert
+brew install mkcert
+```
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
-
-# pnpm
-pnpm install
 ```
+
+Create a `.env` file from `.env.local` and fill in the `STORYBLOK_TOKEN` and `STORYBLOK_SPACE_ID` fields from your storyblok space
 
 ## Development Server
 
 Start the development server on `http://localhost:3000`
 
 ```bash
-npm run dev
+npm run dev:https
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

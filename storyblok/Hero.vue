@@ -36,6 +36,8 @@
 		align-items: center;
 		padding: 20em;
 		background-image: v-bind(backgroundImage);
-		background-size: contain;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
 </style>
