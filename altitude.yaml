@@ -6,7 +6,7 @@ routes:
     type: function
     directory: .
     build:
-      command: build
+      command: generate
       output:
-        directory: .output/server
-        filename: index.mjs
+        directory: .output/public
+        filename: _payload.js
