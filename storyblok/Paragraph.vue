@@ -2,7 +2,9 @@
 	<div
 		v-editable="blok"
 		class="container">
-		<div v-html="text"></div>
+		<div
+			v-html="text"
+			class="text"></div>
 	</div>
 </template>
 
@@ -12,9 +14,15 @@
 	const text = computed(() => renderRichText(blok.text))
 </script>
 
-<style>
+<style scoped>
 	.container {
 		padding: 2em;
 		align-items: baseline;
+	}
+
+	.text {
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+			sans-serif;
 	}
 </style>

@@ -21,7 +21,7 @@
 	const backgroundImage = blok.background && `url(${blok.background.filename})`
 </script>
 
-<style>
+<style scoped>
 	.button {
 		margin-top: 20px;
 		display: inline-block;
