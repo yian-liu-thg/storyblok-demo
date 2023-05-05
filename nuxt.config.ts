@@ -8,6 +8,5 @@ export default defineNuxtConfig({
 		optimizeDeps: {
 			exclude: ["fsevents"]
 		}
-	},
-	buildDir: "dist"
+	}
 })

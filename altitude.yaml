@@ -9,5 +9,5 @@ routes:
       command: build
       output:
         directory: dist
-        filename: _payload.js
+        filename: server/index.mjs
         staticDirectory: _nuxt

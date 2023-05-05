@@ -2,12 +2,12 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt build && mv .output dist",
     "dev": "nuxt dev",
     "dev:https": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && mkdir -p storyblok/types && mkcert localhost",
+    "prepare": "nuxt prepare && mkdir -p storyblok/types && mkcert localhost",
     "predev": "storyblok login && storyblok pull-components --space=$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-) && storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/types/component-types-sb",
     "predev:https": "storyblok login && storyblok pull-components --space=$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-) && storyblok-generate-ts source=./components.$(grep 'STORYBLOK_SPACE_ID=' .env | cut -d '=' -f 2-).json target=storyblok/types/component-types-sb"
   },
