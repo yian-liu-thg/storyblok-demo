@@ -10,4 +10,4 @@ routes:
       output:
         directory: dist
         filename: server/index.mjs
-        staticDirectory: _nuxt
+        staticDirectory: public/_nuxt
