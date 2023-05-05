@@ -6,8 +6,8 @@ routes:
     type: function
     directory: .
     build:
-      command: generate
+      command: build
       output:
-        directory: .output/public
+        directory: dist
         filename: _payload.js
         staticDirectory: _nuxt
